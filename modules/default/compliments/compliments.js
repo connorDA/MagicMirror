@@ -12,22 +12,20 @@ Module.register("compliments", {
 	defaults: {
 		compliments: {
 			anytime: [
-				"Hey there sexy!"
+				"Have a great day!"
 			],
 			morning: [
-				"Good morning, handsome!",
-				"Enjoy your day!",
-				"How was your sleep?"
+				"Good morning!",
+				"Have a great day!"
 			],
 			afternoon: [
-				"Hello, beauty!",
-				"You look sexy!",
-				"Looking good today!"
+				"Enjoy your afternoon!",
+				"Come on in to learn about our programs!",
+				"Hello Adventurer!"
 			],
 			evening: [
-				"Wow, you look hot!",
-				"You look nice!",
-				"Hi, sexy!"
+				"I hope you had a great day!",
+				"Did you learn anything interesting today?"
 			]
 		},
 		updateInterval: 30000,
@@ -170,9 +168,9 @@ Module.register("compliments", {
 	getDom: function() {
 		var wrapper = document.createElement("div");
 		wrapper.className = this.config.classes ? this.config.classes : "thin xlarge bright pre-line";
-		// get the compliment text 
+		// get the compliment text
 		var complimentText = this.randomCompliment();
-		// split it into parts on newline text 
+		// split it into parts on newline text
 		var parts= complimentText.split('\n')
 		// create a span to hold it all
 		var compliment=document.createElement('span')
